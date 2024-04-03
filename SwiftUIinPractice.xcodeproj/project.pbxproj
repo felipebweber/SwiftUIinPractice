@@ -11,6 +11,14 @@
 		55B95D632BBD518E005B3BC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B95D622BBD518E005B3BC0 /* ContentView.swift */; };
 		55B95D652BBD518F005B3BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B95D642BBD518F005B3BC0 /* Assets.xcassets */; };
 		55B95D682BBD518F005B3BC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B95D672BBD518F005B3BC0 /* Preview Assets.xcassets */; };
+		55B95D702BBD52AE005B3BC0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 55B95D6F2BBD52AE005B3BC0 /* SDWebImageSwiftUI */; };
+		55B95D732BBD5324005B3BC0 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B95D722BBD5324005B3BC0 /* ImageLoaderView.swift */; };
+		55B95D752BBD548E005B3BC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B95D742BBD548E005B3BC0 /* Constants.swift */; };
+		55B95D772BBD5AE9005B3BC0 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B95D762BBD5AE9005B3BC0 /* DatabaseHelper.swift */; };
+		55B95D792BBD5FC7005B3BC0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B95D782BBD5FC7005B3BC0 /* Product.swift */; };
+		55B95D7B2BBD5FF2005B3BC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B95D7A2BBD5FF2005B3BC0 /* User.swift */; };
+		55B95D7E2BBD7071005B3BC0 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 55B95D7D2BBD7071005B3BC0 /* SwiftfulUI */; };
+		55B95D812BBD70E0005B3BC0 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 55B95D802BBD70E0005B3BC0 /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,11 @@
 		55B95D622BBD518E005B3BC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		55B95D642BBD518F005B3BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55B95D672BBD518F005B3BC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55B95D722BBD5324005B3BC0 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		55B95D742BBD548E005B3BC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		55B95D762BBD5AE9005B3BC0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		55B95D782BBD5FC7005B3BC0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		55B95D7A2BBD5FF2005B3BC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B95D7E2BBD7071005B3BC0 /* SwiftfulUI in Frameworks */,
+				55B95D812BBD70E0005B3BC0 /* SwiftfulRouting in Frameworks */,
+				55B95D702BBD52AE005B3BC0 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +67,7 @@
 		55B95D5F2BBD518E005B3BC0 /* SwiftUIinPractice */ = {
 			isa = PBXGroup;
 			children = (
+				55B95D712BBD52F8005B3BC0 /* Share */,
 				55B95D602BBD518E005B3BC0 /* SwiftUIinPracticeApp.swift */,
 				55B95D622BBD518E005B3BC0 /* ContentView.swift */,
 				55B95D642BBD518F005B3BC0 /* Assets.xcassets */,
@@ -65,6 +82,18 @@
 				55B95D672BBD518F005B3BC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55B95D712BBD52F8005B3BC0 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				55B95D722BBD5324005B3BC0 /* ImageLoaderView.swift */,
+				55B95D742BBD548E005B3BC0 /* Constants.swift */,
+				55B95D762BBD5AE9005B3BC0 /* DatabaseHelper.swift */,
+				55B95D782BBD5FC7005B3BC0 /* Product.swift */,
+				55B95D7A2BBD5FF2005B3BC0 /* User.swift */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +112,11 @@
 			dependencies = (
 			);
 			name = SwiftUIinPractice;
+			packageProductDependencies = (
+				55B95D6F2BBD52AE005B3BC0 /* SDWebImageSwiftUI */,
+				55B95D7D2BBD7071005B3BC0 /* SwiftfulUI */,
+				55B95D802BBD70E0005B3BC0 /* SwiftfulRouting */,
+			);
 			productName = SwiftUIinPractice;
 			productReference = 55B95D5D2BBD518E005B3BC0 /* SwiftUIinPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +145,11 @@
 				Base,
 			);
 			mainGroup = 55B95D542BBD518E005B3BC0;
+			packageReferences = (
+				55B95D6E2BBD52AE005B3BC0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				55B95D7C2BBD7071005B3BC0 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				55B95D7F2BBD70E0005B3BC0 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+			);
 			productRefGroup = 55B95D5E2BBD518E005B3BC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B95D732BBD5324005B3BC0 /* ImageLoaderView.swift in Sources */,
+				55B95D772BBD5AE9005B3BC0 /* DatabaseHelper.swift in Sources */,
 				55B95D632BBD518E005B3BC0 /* ContentView.swift in Sources */,
 				55B95D612BBD518E005B3BC0 /* SwiftUIinPracticeApp.swift in Sources */,
+				55B95D752BBD548E005B3BC0 /* Constants.swift in Sources */,
+				55B95D792BBD5FC7005B3BC0 /* Product.swift in Sources */,
+				55B95D7B2BBD5FF2005B3BC0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +323,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +352,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +388,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55B95D6E2BBD52AE005B3BC0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+		55B95D7C2BBD7071005B3BC0 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		55B95D7F2BBD70E0005B3BC0 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55B95D6F2BBD52AE005B3BC0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55B95D6E2BBD52AE005B3BC0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		55B95D7D2BBD7071005B3BC0 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55B95D7C2BBD7071005B3BC0 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+		55B95D802BBD70E0005B3BC0 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55B95D7F2BBD70E0005B3BC0 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55B95D552BBD518E005B3BC0 /* Project object */;
 }
