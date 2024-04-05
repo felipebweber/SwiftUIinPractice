@@ -28,33 +28,14 @@ struct SpotifyHomeView: View {
                         
                         VStack(spacing: 16) {
                             recentsSection
+                                .padding(.horizontal, 16)
                             
                             if let product = products.first {
                                 newReleaseSection(product: product)
+                                    .padding(.horizontal, 16)
                             }
                             
-                            ForEach(productRows) { row in
-                                VStack(spacing: 8){
-                                    Text(row.title)
-                                        .font(.title)
-                                        .fontWeight(.semibold)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .foregroundStyle(.spotifyWhite)
-                                    
-                                    ScrollView(.horizontal) { // Horizontal scroll
-                                        HStack(spacing: 8) {
-                                            ForEach(row.products) { product in
-                                                ImageTitleRowCell(
-                                                    imageSize: 120,
-                                                    imageName: product.firstImage,
-                                                    title: product.title
-                                                )
-                                            }
-                                        }
-                                    }
-                                    .scrollIndicators(.hidden)
-                                }
-                            }
+                            listRows
                             
                             
                         }
@@ -94,7 +75,7 @@ struct SpotifyHomeView: View {
             var rows: [ProductRow] = []
             let allBrands = Set(products.map { $0.brand })
             for brand in allBrands {
-                let products = products.filter { $0.brand == brand }
+//                let products = products.filter { $0.brand == brand }
                 rows.append(ProductRow(title: brand, products: products))
             }
             
@@ -143,7 +124,12 @@ struct SpotifyHomeView: View {
     private var recentsSection: some View {
         NonLazyVGrid(columns: 2, alignment: .center, spacing: 10, items: products) { product in
             if let product {
-                SpotifyRecentsCell(imageName: product.firstImage, title: product.title)
+                SpotifyRecentsCell(
+                    imageName: product.firstImage,
+                    title: product.title
+                ).asButton(.press) {
+                    print("Product tapped")
+                }
             }
         }
     }
@@ -162,6 +148,34 @@ struct SpotifyHomeView: View {
                 print("Play")
             }
         )
+    }
+    
+    private var listRows: some View {
+        ForEach(productRows) { row in
+            VStack(spacing: 8){
+                Text(row.title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundStyle(.spotifyWhite)
+                    .padding(.horizontal, 16)
+                
+                ScrollView(.horizontal) { // Horizontal scroll
+                    HStack(alignment: .top, spacing: 16) {
+                        ForEach(row.products) { product in
+                            ImageTitleRowCell(
+                                imageSize: 120,
+                                imageName: product.firstImage,
+                                title: product.title
+                            ).asButton(.press) {
+                                
+                            }
+                        }
+                    }
+                }
+                .scrollIndicators(.hidden)
+            }
+        }
     }
 }
 
